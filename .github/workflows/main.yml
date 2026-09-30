@@ -22,7 +22,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
-          SYMBOLS: EUR/USD,GBP/USD,USD/JPY
+          SYMBOLS: EUR/USD,GBP/USD,USD/JPY,AUD/USD,USD/CAD,USD/CHF,NZD/USD,EUR/JPY,GBP/JPY,EUR/GBP
           MIN_SCORE: "5"
           COOLDOWN_BARS: "3"
         run: python bot.py
