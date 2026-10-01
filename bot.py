@@ -711,54 +711,180 @@ def send_signal(signal):
 # =========================
 
 def main():
-
     state = load_state()
 
-    for symbol in SYMBOLS:
+    def scan_symbols():
+        found = []
+
+        for symbol in SYMBOLS:
+            try:
+                if symbol.endswith("_otc"):
+                    candles = get_otc_candles(symbol)
+                else:
+                    candles = get_candles(symbol)
+
+                signal = analyze(
+                    symbol,
+                    candles,
+                    state
+                )
+
+                if signal is None:
+                    print(
+                        f"{symbol}: сигнала нет"
+                    )
+                    continue
+
+                print(
+                    f"{symbol}: "
+                    f"{signal['direction']} "
+                    f"{signal['score']}/7"
+                )
+
+                send_signal(signal)
+
+                state["last_signals"][symbol] = {
+                    "time": signal["time"],
+                    "direction": signal["direction"],
+                    "score": signal["score"]
+                }
+
+                save_state(state)
+
+                print(
+                    f"{symbol}: сигнал отправлен"
+                )
+
+                found.append(signal)
+
+            except Exception as error:
+                print(
+                    f"{symbol}: ошибка: {error}"
+                )
+
+        return found
+
+    # Первый обычный автоматический поиск
+    scan_symbols()
+
+    # Кнопка ручного поиска
+    keyboard = {
+        "inline_keyboard": [
+            [
+                {
+                    "text": "🔎 НАЙТИ СИГНАЛ",
+                    "callback_data": "find_signal"
+                }
+            ]
+        ]
+    }
+
+    post_form(
+        f"https://api.telegram.org/"
+        f"bot{TELEGRAM_TOKEN}/sendMessage",
+        {
+            "chat_id": CHAT_ID,
+            "text": (
+                "🔎 Нужен новый сигнал?\n\n"
+                "Нажмите кнопку ниже."
+            ),
+            "reply_markup": json.dumps(
+                keyboard,
+                ensure_ascii=False
+            )
+        }
+    )
+
+    # Слушаем нажатие кнопки
+    offset = None
+
+    for _ in range(180):
 
         try:
-            if symbol.endswith("_otc"):
-                candles = get_otc_candles(symbol)
-            else:
-                candles = get_candles(symbol)
-
-            signal = analyze(
-                symbol,
-                candles,
-                state
-            )
-
-            if signal is None:
-                print(
-                    f"{symbol}: сигнала нет"
-                )
-                continue
-
-            print(
-                f"{symbol}: "
-                f"{signal['direction']} "
-                f"{signal['score']}/7"
-            )
-
-            send_signal(signal)
-
-            # Сохраняем последний отправленный сигнал
-            state["last_signals"][symbol] = {
-                "time": signal["time"],
-                "direction": signal["direction"],
-                "score": signal["score"]
+            params = {
+                "timeout": 1
             }
 
-            save_state(state)
+            if offset is not None:
+                params["offset"] = offset
 
-            print(
-                f"{symbol}: сигнал отправлен"
+            url = (
+                f"https://api.telegram.org/"
+                f"bot{TELEGRAM_TOKEN}/getUpdates"
             )
 
-        except Exception as error:
+            updates = post_form(
+                url,
+                params
+            )
 
+            for update in updates.get(
+                "result",
+                []
+            ):
+
+                offset = update["update_id"] + 1
+
+                callback = update.get(
+                    "callback_query"
+                )
+
+                if not callback:
+                    continue
+
+                if (
+                    callback.get("data")
+                    != "find_signal"
+                ):
+                    continue
+
+                callback_id = callback["id"]
+
+                # Убираем "часики" с кнопки
+                post_form(
+                    f"https://api.telegram.org/"
+                    f"bot{TELEGRAM_TOKEN}/answerCallbackQuery",
+                    {
+                        "callback_query_id":
+                            callback_id,
+                        "text":
+                            "🔎 Ищу сигнал..."
+                    }
+                )
+
+                # Запускаем тот же анализ
+                found = scan_symbols()
+
+                if found:
+                    text = (
+                        "✅ Поиск завершён.\n"
+                        f"Найдено сигналов: "
+                        f"{len(found)}"
+                    )
+                else:
+                    text = (
+                        "🔎 Сигнал не найден.\n\n"
+                        "Проверены все пары по "
+                        "текущей стратегии."
+                    )
+
+                post_form(
+                    f"https://api.telegram.org/"
+                    f"bot{TELEGRAM_TOKEN}/sendMessage",
+                    {
+                        "chat_id": CHAT_ID,
+                        "text": text,
+                        "reply_markup": json.dumps(
+                            keyboard,
+                            ensure_ascii=False
+                        )
+                    }
+                )
+
+        except Exception as error:
             print(
-                f"{symbol}: ошибка: {error}"
+                f"Ошибка обработки кнопки: "
+                f"{error}"
             )
 
 
