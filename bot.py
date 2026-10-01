@@ -24,8 +24,8 @@ SYMBOLS = [
     if s.strip()
 ]
 
-MIN_SCORE = int(os.getenv("MIN_SCORE", "5"))
-COOLDOWN_BARS = int(os.getenv("COOLDOWN_BARS", "3"))
+MIN_SCORE = int(os.getenv("MIN_SCORE", "4"))
+COOLDOWN_BARS = int(os.getenv("COOLDOWN_BARS", "1"))
 
 STATE_FILE = "signal_state.json"
 
