@@ -1,8 +1,8 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-01 10:25:00",
-      "direction": "PUT",
+      "time": "2026-10-01 16:35:00",
+      "direction": "CALL",
       "score": 5
     },
     "EUR/USD": {
