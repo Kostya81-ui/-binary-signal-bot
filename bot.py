@@ -5,7 +5,7 @@ import math
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
-
+from pocket_option import get_otc_candles
 
 # =========================
 # НАСТРОЙКИ
@@ -717,7 +717,10 @@ def main():
     for symbol in SYMBOLS:
 
         try:
-            candles = get_candles(symbol)
+            if symbol.endswith("_otc"):
+                candles = get_otc_candles(symbol)
+            else:
+                candles = get_candles(symbol)
 
             signal = analyze(
                 symbol,
