@@ -29,9 +29,9 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
           PO_SSID: ${{ secrets.PO_SSID }}
-          SYMBOLS: EUR/USD,GBP/USD,USD/JPY,AUD/USD
-          MIN_SCORE: "5"
-          COOLDOWN_BARS: "3"
+          SYMBOLS: EUR/USD,GBP/USD,USD/JPY,AUD/USD,USD/CAD,USD/CHF,NZD/USD,EUR/JPY,GBP/JPY,EUR/GBP
+          MIN_SCORE: "4"
+          COOLDOWN_BARS: "1"
         run: python bot.py
 
       - name: Save signal state
