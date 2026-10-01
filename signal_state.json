@@ -21,13 +21,13 @@
       "score": 5
     },
     "NZD/USD": {
-      "time": "2026-10-01 07:05:00",
+      "time": "2026-10-01 16:20:00",
       "direction": "CALL",
       "score": 5
     },
     "USD/CAD": {
-      "time": "2026-10-01 08:00:00",
-      "direction": "CALL",
+      "time": "2026-10-01 16:20:00",
+      "direction": "PUT",
       "score": 5
     },
     "EUR/JPY": {
