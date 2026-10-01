@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Install Pocket Option client
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install git+https://github.com/chema-creator/PocketOptionApi.git
 
       - name: Run signal bot
         env:
