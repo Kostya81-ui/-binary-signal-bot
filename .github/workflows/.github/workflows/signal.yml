@@ -18,13 +18,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Install Pocket Option client
         run: |
-          python -m pip install --upgrade pip
-          git clone https://github.com/chema-creator/PocketOptionApi.git /tmp/PocketOptionApi
-          cd /tmp/PocketOptionApi
-          python -m pip install -e .
+          git clone https://github.com/chema-creator/PocketOptionApi.git /tmp/PocketOptionApi  
 
       - name: Run signal bot
         env:
+          PYTHONPATH: /tmp/PocketOptionApi
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TWELVE_DATA_API_KEY: ${{ secrets.TWELVE_DATA_API_KEY }}
