@@ -20,7 +20,8 @@ jobs:
         run: |
           git clone https://github.com/chema-creator/PocketOptionApi.git /tmp/PocketOptionApi
           python -m pip install -r /tmp/PocketOptionApi/requirements.txt
-          PYTHONPATH=/tmp/PocketOptionApi python -c "import pocketoptionapi; print(pocketoptionapi.__file__)"
+          python -m pip install -e /tmp/PocketOptionApi
+          python -c "import pocketoptionapi; print(pocketoptionapi.__file__)"
 
       - name: Run signal bot
         env:
