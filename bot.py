@@ -67,12 +67,12 @@ def post_form(url, data):
 # TWELVE DATA
 # =========================
 
-def get_candles(symbol):
+def get_candles(symbol, interval="5min"):
     data = get_json(
         "https://api.twelvedata.com/time_series",
         {
             "symbol": symbol,
-            "interval": "5min",
+            "interval": interval,
             "outputsize": "250",
             "order": "desc",
             "timezone": "UTC",
