@@ -6,9 +6,9 @@
       "score": 5
     },
     "EUR/USD": {
-      "time": "2026-10-02 17:30:00",
-      "direction": "CALL",
-      "score": 5
+      "time": "2026-10-02 17:45:00",
+      "direction": "PUT",
+      "score": 6
     },
     "GBP/USD": {
       "time": "2026-10-02 13:50:00",
