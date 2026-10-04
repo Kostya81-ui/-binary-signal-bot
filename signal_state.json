@@ -11,8 +11,8 @@
       "score": 5
     },
     "GBP/USD": {
-      "time": "2026-10-04 06:50:00",
-      "direction": "PUT",
+      "time": "2026-10-04 23:05:00",
+      "direction": "CALL",
       "score": 5
     },
     "USD/CHF": {
@@ -21,9 +21,9 @@
       "score": 5
     },
     "NZD/USD": {
-      "time": "2026-10-04 22:35:00",
-      "direction": "PUT",
-      "score": 5
+      "time": "2026-10-04 23:05:00",
+      "direction": "CALL",
+      "score": 4
     },
     "USD/CAD": {
       "time": "2026-10-04 22:50:00",
