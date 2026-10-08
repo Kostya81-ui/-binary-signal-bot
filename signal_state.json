@@ -6,7 +6,7 @@
       "score": 5
     },
     "EUR/USD": {
-      "time": "2026-10-08 10:20:00",
+      "time": "2026-10-08 11:40:00",
       "direction": "CALL",
       "score": 5
     },
@@ -16,8 +16,8 @@
       "score": 4
     },
     "USD/CHF": {
-      "time": "2026-10-08 04:05:00",
-      "direction": "CALL",
+      "time": "2026-10-08 11:40:00",
+      "direction": "PUT",
       "score": 5
     },
     "NZD/USD": {
