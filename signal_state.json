@@ -1,9 +1,9 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-09 21:50:00",
-      "direction": "CALL",
-      "score": 6
+      "time": "2026-10-10 00:35:00",
+      "direction": "PUT",
+      "score": 5
     },
     "EUR/USD": {
       "time": "2026-10-09 21:50:00",
@@ -16,8 +16,8 @@
       "score": 5
     },
     "USD/CHF": {
-      "time": "2026-10-09 22:50:00",
-      "direction": "CALL",
+      "time": "2026-10-10 00:35:00",
+      "direction": "PUT",
       "score": 6
     },
     "NZD/USD": {
