@@ -1,23 +1,23 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-10 15:15:00",
+      "time": "2026-10-10 16:45:00",
       "direction": "CALL",
-      "score": 4
+      "score": 5
     },
     "EUR/USD": {
-      "time": "2026-10-10 13:30:00",
+      "time": "2026-10-10 16:45:00",
       "direction": "PUT",
       "score": 5
     },
     "GBP/USD": {
-      "time": "2026-10-10 15:35:00",
+      "time": "2026-10-10 16:45:00",
       "direction": "CALL",
       "score": 5
     },
     "USD/CHF": {
-      "time": "2026-10-10 15:15:00",
-      "direction": "CALL",
+      "time": "2026-10-10 16:45:00",
+      "direction": "PUT",
       "score": 5
     },
     "NZD/USD": {
@@ -31,12 +31,12 @@
       "score": 5
     },
     "EUR/JPY": {
-      "time": "2026-10-10 14:40:00",
+      "time": "2026-10-10 16:45:00",
       "direction": "PUT",
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-10 14:40:00",
+      "time": "2026-10-10 16:45:00",
       "direction": "CALL",
       "score": 5
     },
