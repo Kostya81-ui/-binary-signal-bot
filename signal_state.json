@@ -16,12 +16,12 @@
       "score": 5
     },
     "USD/CHF": {
-      "time": "2026-10-11 11:25:00",
+      "time": "2026-10-11 13:05:00",
       "direction": "PUT",
-      "score": 6
+      "score": 5
     },
     "NZD/USD": {
-      "time": "2026-10-11 12:45:00",
+      "time": "2026-10-11 13:05:00",
       "direction": "PUT",
       "score": 5
     },
@@ -36,7 +36,7 @@
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-11 12:45:00",
+      "time": "2026-10-11 13:05:00",
       "direction": "PUT",
       "score": 5
     },
