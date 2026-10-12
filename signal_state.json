@@ -1,7 +1,7 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-12 05:30:00",
+      "time": "2026-10-12 05:50:00",
       "direction": "PUT",
       "score": 5
     },
@@ -16,7 +16,7 @@
       "score": 5
     },
     "USD/CHF": {
-      "time": "2026-10-11 23:25:00",
+      "time": "2026-10-12 05:50:00",
       "direction": "PUT",
       "score": 5
     },
@@ -26,12 +26,12 @@
       "score": 5
     },
     "USD/CAD": {
-      "time": "2026-10-12 05:05:00",
+      "time": "2026-10-12 05:50:00",
       "direction": "PUT",
       "score": 5
     },
     "EUR/JPY": {
-      "time": "2026-10-12 04:20:00",
+      "time": "2026-10-12 05:50:00",
       "direction": "PUT",
       "score": 5
     },
