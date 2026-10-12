@@ -16,9 +16,9 @@
       "score": 6
     },
     "USD/CHF": {
-      "time": "2026-10-12 18:15:00",
-      "direction": "CALL",
-      "score": 6
+      "time": "2026-10-12 20:45:00",
+      "direction": "PUT",
+      "score": 4
     },
     "NZD/USD": {
       "time": "2026-10-12 14:30:00",
