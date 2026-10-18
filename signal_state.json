@@ -1,12 +1,12 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-18 19:50:00",
-      "direction": "CALL",
-      "score": 5
+      "time": "2026-10-18 20:15:00",
+      "direction": "PUT",
+      "score": 6
     },
     "EUR/USD": {
-      "time": "2026-10-18 18:40:00",
+      "time": "2026-10-18 20:15:00",
       "direction": "CALL",
       "score": 5
     },
@@ -31,12 +31,12 @@
       "score": 4
     },
     "EUR/JPY": {
-      "time": "2026-10-18 18:40:00",
+      "time": "2026-10-18 20:15:00",
       "direction": "CALL",
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-18 19:00:00",
+      "time": "2026-10-18 20:15:00",
       "direction": "PUT",
       "score": 5
     },
