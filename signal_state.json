@@ -6,9 +6,9 @@
       "score": 5
     },
     "EUR/USD": {
-      "time": "2026-10-19 23:05:00",
+      "time": "2026-10-20 01:30:00",
       "direction": "PUT",
-      "score": 4
+      "score": 5
     },
     "GBP/USD": {
       "time": "2026-10-19 08:35:00",
@@ -26,12 +26,12 @@
       "score": 5
     },
     "USD/CAD": {
-      "time": "2026-10-19 15:50:00",
+      "time": "2026-10-20 01:30:00",
       "direction": "CALL",
       "score": 5
     },
     "EUR/JPY": {
-      "time": "2026-10-19 22:40:00",
+      "time": "2026-10-20 01:30:00",
       "direction": "PUT",
       "score": 5
     },
