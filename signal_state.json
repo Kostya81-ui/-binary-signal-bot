@@ -26,9 +26,9 @@
       "score": 5
     },
     "USD/CAD": {
-      "time": "2026-10-23 10:10:00",
-      "direction": "CALL",
-      "score": 5
+      "time": "2026-10-23 10:45:00",
+      "direction": "PUT",
+      "score": 6
     },
     "EUR/JPY": {
       "time": "2026-10-23 07:45:00",
