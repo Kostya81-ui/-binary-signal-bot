@@ -31,12 +31,12 @@
       "score": 5
     },
     "EUR/JPY": {
-      "time": "2026-10-23 15:55:00",
-      "direction": "CALL",
+      "time": "2026-10-23 18:05:00",
+      "direction": "PUT",
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-23 11:50:00",
+      "time": "2026-10-23 18:05:00",
       "direction": "PUT",
       "score": 5
     },
