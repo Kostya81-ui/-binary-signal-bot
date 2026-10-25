@@ -6,23 +6,23 @@
       "score": 5
     },
     "EUR/USD": {
-      "time": "2026-10-24 23:30:00",
+      "time": "2026-10-24 23:50:00",
       "direction": "PUT",
-      "score": 5
+      "score": 6
     },
     "GBP/USD": {
-      "time": "2026-10-24 23:30:00",
+      "time": "2026-10-24 23:50:00",
       "direction": "PUT",
       "score": 6
     },
     "USD/CHF": {
-      "time": "2026-10-24 23:30:00",
+      "time": "2026-10-24 23:50:00",
       "direction": "PUT",
       "score": 5
     },
     "NZD/USD": {
-      "time": "2026-10-24 23:30:00",
-      "direction": "PUT",
+      "time": "2026-10-24 23:50:00",
+      "direction": "CALL",
       "score": 5
     },
     "USD/CAD": {
@@ -36,9 +36,9 @@
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-24 23:30:00",
+      "time": "2026-10-24 23:50:00",
       "direction": "PUT",
-      "score": 5
+      "score": 6
     },
     "GBP/JPY": {
       "time": "2026-10-23 21:40:00",
