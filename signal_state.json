@@ -1,7 +1,7 @@
 {
   "last_signals": {
     "USD/JPY": {
-      "time": "2026-10-25 23:55:00",
+      "time": "2026-10-26 02:50:00",
       "direction": "CALL",
       "score": 5
     },
@@ -31,12 +31,12 @@
       "score": 5
     },
     "EUR/JPY": {
-      "time": "2026-10-25 22:15:00",
+      "time": "2026-10-26 02:50:00",
       "direction": "CALL",
       "score": 5
     },
     "AUD/USD": {
-      "time": "2026-10-25 23:30:00",
+      "time": "2026-10-26 02:50:00",
       "direction": "CALL",
       "score": 5
     },
